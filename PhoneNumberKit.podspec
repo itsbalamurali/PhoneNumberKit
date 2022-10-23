@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Roy Marmelstein" => "marmelroy@gmail.com" }
-  s.source           = { :git => "https://github.com/marmelroy/PhoneNumberKit.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/itsbalamurali/PhoneNumberKit.git", :tag => s.version.to_s }
   s.social_media_url   = "http://twitter.com/marmelroy"
 
 
@@ -33,18 +33,18 @@ Pod::Spec.new do |s|
   s.ios.frameworks = 'CoreTelephony'
   s.osx.frameworks = 'CoreTelephony'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
   s.osx.deployment_target = '10.10'
-  s.tvos.deployment_target = '10.0'
+  s.tvos.deployment_target = '12.0'
   s.watchos.deployment_target = '2.0'
 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
   s.swift_version = '5.0'
 
   s.subspec 'PhoneNumberKitCore' do |core|
-    core.ios.deployment_target = '9.0'
+    core.ios.deployment_target = '11.0'
     core.osx.deployment_target = '10.10'
-    core.tvos.deployment_target = '10.0'
+    core.tvos.deployment_target = '11.0'
     core.watchos.deployment_target = '2.0'
     core.source_files = "PhoneNumberKit/*.{swift}"
     core.resources = "PhoneNumberKit/Resources/PhoneNumberMetadata.json"
@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'UIKit' do |ui|
     ui.dependency 'PhoneNumberKit/PhoneNumberKitCore'
-    ui.ios.deployment_target = '9.0'
+    ui.ios.deployment_target = '12.0'
     ui.source_files = 'PhoneNumberKit/UI/'
   end
 
